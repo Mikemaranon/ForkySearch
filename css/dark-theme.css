@@ -31,7 +31,8 @@ input:checked + .slider {
 
 /* Estilos añadidos de upload-pdf.css */
 .container {
-    border-color: #555;
+    border-color: #4e4e4e;
+    background-color: #585858;
 }
 
 .container button {

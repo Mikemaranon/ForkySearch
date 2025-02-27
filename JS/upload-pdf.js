@@ -21,3 +21,9 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         alert('An error occurred while uploading the file.');
     }
 });
+
+document.getElementById('pdfFile').addEventListener('change', function() {
+    const uploadBox = document.getElementById('uploadBox');
+    const fileName = this.files[0] ? this.files[0].name : 'Click to select a PDF file';
+    uploadBox.textContent = fileName;
+});

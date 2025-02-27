@@ -32,6 +32,7 @@ header h1 {
     font-size: 32px;
     flex-grow: 1;
     text-align: center;
+    margin-left: 5.5%;
 }
 
 .theme-toggle {

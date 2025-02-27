@@ -3,7 +3,7 @@ body {
     margin: 50px;
 }
 .container {
-    max-width: 500px;
+    min-width: 500px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -14,8 +14,23 @@ body {
     text-align: center;
 }
 .container input[type="file"] {
+    display: none;
+}
+
+.upload-box {
     display: block;
-    margin: 20px auto;
+    width: 91%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #a5a5a5;
+}
+.upload-box:hover {
+    border-color: #aaa;
+    color: #333;
 }
 .container button {
     display: block;
@@ -24,4 +39,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
