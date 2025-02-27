@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forked Search</title>
+    <link rel="stylesheet" href="css/general-style.css">
+    <link rel="stylesheet" id="theme-style" href="css/white-theme.css">
+</head>
+<body>
+    <header>
+        <h1>Forked Search</h1>
+        <label class="theme-toggle">
+            <input type="checkbox" id="theme-toggle-checkbox">
+            <span class="slider"></span>
+        </label>
+    </header>
+    <div class="main-content">
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="¿Que quieres comer hoy...?">
+            <button type="button" id="search-button">Search</button>
+        </div>
+        <div id="results-container">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <footer>
+        <button id="upload-pdf-button" onclick="location.href='sites/upload-pdf.html'">Upload PDF</button>
+    </footer>
+    <script src="JS/toggle-theme.js"></script>
+    <script src="JS/fetch-jsons.js"></script>
+    <script src="JS/search-jsons.js"></script>
+</body>
+</html>

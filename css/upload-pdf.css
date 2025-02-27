@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    text-align: center;
+}
+.container input[type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+.container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

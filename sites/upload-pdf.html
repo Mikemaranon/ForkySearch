@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="../css/upload-pdf.css">
+</head>
+<body>
+    <header>
+        <h1>Forked Search</h1>
+        <label class="theme-toggle">
+            <input type="checkbox" id="theme-toggle-checkbox">
+            <span class="slider"></span>
+        </label>
+    </header>
+    <div class="container">
+        <h2>Upload PDF</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="pdfFile" name="pdfFile" accept="application/pdf" required>
+            <button type="submit">Upload</button><br>
+            <a href="../index.html"><button type="button">Volver</button></a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('pdfFile');
+            const formData = new FormData();
+            formData.append('pdfFile', fileInput.files[0]);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('File uploaded successfully!');
+                } else {
+                    alert('Failed to upload file.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while uploading the file.');
+            }
+        });
+    </script>
+    <script src="JS/toggle-theme.js"></script>
+    <script src="JS/upload-pdf.js"></script>
+</body>
+</html>
